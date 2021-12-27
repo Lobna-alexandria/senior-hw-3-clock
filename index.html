@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/all.css">
+    <style>
+
+        body{background-color: navy;}
+        *{box-sizing: border-box;}
+
+
+     .Moonbody{ margin: auto;position: relative;z-index:2;
+        display: block;
+         background-color: white;
+         width:400px;height: 400px;
+         border-radius: 50%;
+         box-shadow:  5px 5px 15px 5px #000000;
+         padding: 50px; box-shadow: 5px 5px 34px 5px #F0F0F0;
+         
+         animation: moonScale 26s  ease-out ;
+    }
+     
+   
+
+     .arrowCircle{color: rgb(175, 29, 29);background-color:navy;height: 300px;width: 300px; 
+     display: block;border-radius: 50%;position: relative;z-index: 1;
+     visibility: hidden;
+     animation: arrowCircle 26s  ease-in-out ;
+     
+     
+       }
+
+     .fa-long-arrow-alt-up {text-align: center;
+       
+         font-size:150px;display: block;
+         color: rgb(205, 214, 207);
+         visibility: hidden;
+        
+         animation: arrow 26s  ease-in-out 0s   ;
+         }
+.plane{position: absolute;z-index: 3;
+  left:-350px;top:100px;}
+
+  .plane img{display: block;height: 200px;width: 350px;
+  animation: plane 13s ease-in 10s ;}
+  
+
+
+.ad-text {position: absolute;
+    visibility: hidden;
+   /* z-index: 0 ;          */
+      height: 300px;width: 300px; 
+    animation: ad-text 10s ease-in 22s ;
+    }
+
+    
+.ad-text a{text-decoration: none;
+color: white;font-size: larger;
+background-color: navy;padding: 10px;}
+
+
+@keyframes arrowCircle {
+    0%{visibility: visible;}
+     25% {transform: rotatez(360deg);}
+     50%  {transform: translate(-380px,0px);  }
+     100%{transform: translate(-380px,0px); }
+         }
+    
+
+
+@keyframes arrow {
+0%{visibility: visible;}
+    40% {transform: rotatey(360deg);color:navy;}
+     100% {color:navy;}
+  
+         }
+    
+@keyframes moonScale {
+    50%{transform: translate(500px,0);}
+    75%{ transform:scale(.75,.75); }
+    92%{ transform:scale(.75,.75); }
+    97%{ transform:scale(4,4); }
+    100%{ transform:scale(.75,.75); }
+}
+
+@keyframes plane {
+    100%{transform: translate(1700px,0);}
+   
+}
+
+@keyframes ad-text {
+    98%{visibility: visible;}
+    100%{visibility: visible;}
+    
+    
+}
+    </style>
+</head>
+<body>
+    <div class="Moonbody">
+
+        <div class="ad-text">
+            <h1>Egypt Air</h1>
+            <h1>Takes You To the moon and Back </h1>
+             <a href="" >book Now <i class="fas fa-plane"></i></a>
+        </div>
+        
+        <div class="arrowCircle">
+            <i class="fas fa-long-arrow-alt-up"></i>
+        
+        </div>
+
+
+      
+    </div>
+        
+    
+  <div class="plane">
+  <img src="photos/plane.png">
+  </div>
+   
+</body>
+</html>
